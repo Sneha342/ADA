@@ -1,14 +1,8 @@
-/******************************************************************************
 
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <stdio.h>
 #include<string.h>
-int size_of_grid, b, a, cnt = 0;
+int size, b, a, cnt = 0;
 int arr[128][128];
 
 void place(int x1, int y1, int x2,
@@ -65,13 +59,13 @@ int tile(int n, int x, int y)
 }
 int main()
 {
-	size_of_grid = 8;
+	size = 8;
 	memset(arr, 0, sizeof(arr));
 	a = 0, b = 0;
 	arr[a][b] = -1;
-	tile(size_of_grid, 0, 0);
-	for (int i = 0; i < size_of_grid; i++) {
-		for (int j = 0; j < size_of_grid; j++)
+	tile(size, 0, 0);
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++)
 			printf("%d ", arr[i][j]);
 		printf("\n");
 	}
